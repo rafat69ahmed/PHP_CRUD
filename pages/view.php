@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Table Panel with Pagination - Bootsnipp.com</title>
+    <title>crud</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
@@ -75,13 +75,14 @@ used to vertically center elements, may need modification if you're not using de
 </head>
 <body>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+<link rel="icon" href="../images/fav.ico" type="image" sizes="20x20">
 
 <div class="container">
     <div class="row">
     
     <p></p>
-    <h1>Bootstrap Table Panel with Pagination</h1>
-    <p>A simple example of how-to put a bordered table within a panel. Responsive, place holders in header/footer for buttons or pagination.</p>
+    <h1>View Data In a Table</h1>
+    <p>Update Or Delete Data From Here.</p>
     <p>&nbsp;</p><p>&nbsp;</p>
     
         <div class="col-md-10 col-md-offset-1">
@@ -126,8 +127,8 @@ while($row = $rsd->fetch_array(MYSQLI_ASSOC))
 
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              <a class="btn btn-default" href="update.php?id=<?php echo $c_n ?>"><em class="fa fa-pencil"></em></a>
+                              <a class="btn btn-danger" href="delete_data.php?id=<?php echo $c_n ?>"><em class="fa fa-trash"></em></a>
                             </td>
                             <!-- <td class="hidden-xs">1</td> -->
                             <td><?php echo $c_n; ?></td>
